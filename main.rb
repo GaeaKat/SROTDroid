@@ -11,5 +11,5 @@ scheduler.every '10s' do
 end
 
 red=Reddit.instance
-pp red.get_modmail("lgbt")[0]
+pp red.get_modmail("nekosune")[0]
 scheduler.join
