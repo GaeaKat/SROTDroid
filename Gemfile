@@ -7,7 +7,8 @@ gem "rufus-scheduler"
 gem "google_drive"
 # Optional fast JSON parser.
 gem "oj", platforms: :ruby
-
+gem "activesupport"
+gem 'sqlite3'
 # debug only
 gem 'debase'
 

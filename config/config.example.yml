@@ -3,3 +3,14 @@ reddit:
     password: password
     clientid: CLIENT_ID
     secret: SECRET
+modmail:
+    subreddit: nekosune
+    daysEligable: 30
+    subscribers: 500
+database:
+    database: droid.db
+google:
+    p12: srotd.json
+    secret: secret
+    accountid: accountid
+    spreadsheet: 1c0k_-VxQ9mNB8UMxVnBXWg1DmBmJtB-YZmJ0SaMRZ3g
