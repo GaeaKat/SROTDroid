@@ -5,7 +5,9 @@ class Reddit
 
 
   def get_modmail(subreddit)
-    @redditclient.subreddit_modmail(subreddit)
+    params={}
+    params[:mark]=false
+    @redditclient.request_object(:get,"/r/#{subreddit}/about/message/inbox.json",params)
   end
 
   def get_subreddit(subredditName)

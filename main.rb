@@ -2,13 +2,14 @@ require 'rufus-scheduler'
 require 'rubygems'
 require 'bundler/setup'
 require './droidConfig'
+require './google'
 require './reddit'
 require './database'
-require './google'
+
 require 'pp'
 require 'date'
 scheduler = Rufus::Scheduler.new
-#red=Reddit.instance
+red=Reddit.instance
 Database.instance.initializeTables
 subredditRegex=/r\/([A-Za-z0-9][A-Za-z0-9_]{2,20})/i
 scheduler.every '5m',:overlap => false,:first => :now do
@@ -32,13 +33,24 @@ scheduler.every '5m',:overlap => false,:first => :now do
           print "Has #{subscribers} subscribers\n"
           populatedEnough=subscribers > DroidConfig.instance['modmail']['subscribers']
           print "is subreddit populated enough? #{populatedEnough}\n"
+          featuredRow=GoogleD.instance.getFeaturedSubreddit(subreddit)
+          featuredLink=nil
+          if(not featuredRow.nil?)
+            featuredLink=GoogleD.instance.getFeaturedLink(featuredRow)
+          end
+          featuredBefore=!featuredRow.nil?
+          print "Has been featured before? #{featuredBefore} "
+          if featuredBefore
+              print "At = #{featuredLink}"
+          end
+          print "\n"
         end
       end
     end
   end
 end
+pp GoogleD.instance.getFeaturedSubreddit("pokemon")
+scheduler.join
 
-GoogleD.instance.setCell(1,1,"test")
-GoogleD.instance.save
+#GoogleD.instance.save
 
-#scheduler.join

@@ -13,4 +13,5 @@ google:
     p12: srotd.json
     secret: secret
     accountid: accountid
-    spreadsheet: 1c0k_-VxQ9mNB8UMxVnBXWg1DmBmJtB-YZmJ0SaMRZ3g
+    nominationsSpreadsheet: 1c0k_-VxQ9mNB8UMxVnBXWg1DmBmJtB-YZmJ0SaMRZ3g
+    featuredSpreadsheet: 1a2tJoAwzuSGwZvDrDRQRyvteVRBKComtAaXoMf3jOYA
