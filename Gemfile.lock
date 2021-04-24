@@ -52,13 +52,16 @@ GEM
     jwt (1.5.1)
     launchy (2.4.3)
       addressable (~> 2.3)
-    mini_portile (0.6.2)
+    mini_portile2 (2.5.0)
     minitest (5.8.0)
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    nokogiri (1.6.6.2-x86-mingw32)
-      mini_portile (~> 0.6.0)
+    nokogiri (1.11.3)
+      mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
+    nokogiri (1.11.3-x86-mingw32)
+      racc (~> 1.4)
     oauth (0.4.7)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
@@ -66,6 +69,8 @@ GEM
       multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (~> 1.2)
+    oj (3.11.5)
+    racc (1.5.2)
     rack (1.6.4)
     rake (10.4.2)
     retriable (1.4.1)
@@ -76,12 +81,14 @@ GEM
       faraday (~> 0.9)
       jwt (~> 1.5)
       multi_json (~> 1.10)
+    sqlite3 (1.3.10)
     sqlite3 (1.3.10-x86-mingw32)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES
